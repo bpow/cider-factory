@@ -1,13 +1,11 @@
 class Vt < Formula
   desc "tools for dealing with genomic variant VCF files"
   homepage "https://github.com/atks/vt"
-  url "https://github.com/atks/vt/archive/39f8680.tar.gz"
-  version "2016-06-02"
-  sha256 "d66a5377b33e62a37bad904e7ada6e292cc14abd0592086c232436f9511500cc"
+  url "https://github.com/atks/vt/archive/6686b5c.tar.gz"
+  version "2017-05-08"
+  sha256 "659d1ab83d404b4dbb58c547bfb0c42d168ddfb518bab9fa7af9ab78c25f700f"
 
   def install
-    inreplace "paste_and_compute_features_sequential.cpp", " isnan", " std::isnan"
-    inreplace "paste_genotypes.cpp", " isnan", " std::isnan"
     system "make"
     bin.install "vt"
   end
